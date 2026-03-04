@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <title>Moemn Adel Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="description" content="Portfolio of Moemn Adel, AI Engineer focused on Computer Vision, NLP, and end-to-end AI products.">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <header>
     <div class="container nav-container">
         <h2 class="logo">Portfolio</h2>
-        <nav>
-            <ul>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav aria-label="Primary navigation">
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -30,37 +35,38 @@
     </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
-    <div class="hero-content">
+    <div class="hero-content container">
         <h1>Moemn Adel</h1>
         <p>AI Engineer</p>
 
         <div class="hero-buttons">
-            <a href="https://drive.google.com/file/d/1Dca4IUldd1VCV_z41UIoD0ejRUM20Dus/view?usp=sharing" class="btn primary">My Resume</a>
-            <a href="https://github.com/ELHALOSE" target="_blank" class="btn">GitHub</a>
-            <a href="mailto:melhalose@gmail.com" target="_blank" class="btn">Email</a>
-            <a href="tel:01060242306" target="_blank" class="btn">Phone</a>
-            <a href="https://www.linkedin.com/in/moemenelhalose/" target="_blank" class="btn">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1Dca4IUldd1VCV_z41UIoD0ejRUM20Dus/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn primary">My Resume</a>
+            <a href="https://github.com/ELHALOSE" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+            <a href="mailto:melhalose@gmail.com" class="btn">Email</a>
+            <a href="tel:+201060242306" class="btn">Phone</a>
+            <a href="https://www.linkedin.com/in/moemenelhalose/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
         </div>
     </div>
 </section>
 
-<!-- ================= SECTIONS ================= -->
-
 <section id="about" class="section">
     <div class="container">
         <h2>About</h2>
-        <p>AI Engineer with hands-on experience building end-to-end Product solutions. Strong
-background in Computer Vision, Natural Language Processing, and Machine Learning. Developed practical
-projects including RAG applications, sign language recognition, object detection and speech recognition.</p>
+        <p>
+            AI Engineer with hands-on experience building end-to-end product solutions. Strong background in Computer Vision,
+            Natural Language Processing, and Machine Learning. Developed practical projects including RAG applications,
+            sign language recognition, object detection, and speech recognition.
+        </p>
     </div>
 </section>
 
 <section id="education" class="section">
     <div class="container">
         <h2>Education</h2>
-        <li><b>Bachelor of Information Technology</b> Egyptian E-Learning University    (Oct 2021 – Jun 2025)</li>
+        <ul class="list-block">
+            <li><b>Bachelor of Information Technology</b> — Egyptian E-Learning University (Oct 2021 – Jun 2025)</li>
+        </ul>
     </div>
 </section>
 
@@ -68,25 +74,26 @@ projects including RAG applications, sign language recognition, object detection
     <div class="container">
         <h2>Projects</h2>
         <div class="grid">
-            <div class="card">
-                <img src="assets/rag.png" alt="RAG System">
+            <article class="card">
+                <img src="assets/rag.png" alt="RAG System preview">
                 <h3>RAG Application</h3>
-                <p>Developed a Retrieval-Augmented Generation (RAG) application that integrates a vector database and a language model to provide accurate and context-aware responses.</p>
-                <a href="https://github.com/minirag-organiz/mini-rag" target="_blank" class="btn">View Project</a>
-            </div>
+                <p>Developed a Retrieval-Augmented Generation (RAG) application that integrates a vector database and language model to deliver accurate, context-aware responses.</p>
+                <a href="https://github.com/minirag-organiz/mini-rag" target="_blank" rel="noopener noreferrer" class="btn card-btn">View Project</a>
+            </article>
 
-            <div class="card">
-                <img src="assets/The Sacks of Sands.png" alt="The Sacks of Sands">
-                <h3>The Sacks of Sands </h3>
-                <p>Developed a video analysis system  algorithm to detect, track and counter sandbags </p>
-                <a href="https://github.com/ELHALOSE/The_Sacks_of_Sands" target="_blank" class="btn">View Project</a>
-            </div>
-            <div class="card">
-                <img src="assets/def sign.png" alt="Sign Language Recognition System">
+            <article class="card">
+                <img src="assets/The Sacks of Sands.png" alt="The Sacks of Sands project preview">
+                <h3>The Sacks of Sands</h3>
+                <p>Built a video analysis pipeline to detect, track, and count sandbags with computer vision techniques for operational use.</p>
+                <a href="https://github.com/ELHALOSE/The_Sacks_of_Sands" target="_blank" rel="noopener noreferrer" class="btn card-btn">View Project</a>
+            </article>
+
+            <article class="card">
+                <img src="assets/def sign.png" alt="Sign language recognition system preview">
                 <h3>Sign Language Recognition System</h3>
-                <p>Deafbot is an AI-powered application designed to bridge the communication gap for individuals with hearing impairments. It recognizes sign language gestures in real-time, translates them into text, and uses Large Language Models to generate intelligent responses .</p>
-                <a href="https://github.com/ELHALOSE/GraduationProject" target="_blank" class="btn">View Project</a>
-            </div>
+                <p>Deafbot recognizes sign gestures in real-time, translates them into text, and leverages LLMs to generate intelligent responses.</p>
+                <a href="https://github.com/ELHALOSE/GraduationProject" target="_blank" rel="noopener noreferrer" class="btn card-btn">View Project</a>
+            </article>
         </div>
     </div>
 </section>
@@ -94,30 +101,57 @@ projects including RAG applications, sign language recognition, object detection
 <section id="skills" class="section">
     <div class="container">
         <h2>Skills</h2>
-        <p>Your skills content goes here...</p>
+        <ul class="chip-list">
+            <li>Python</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>Computer Vision</li>
+            <li>NLP</li>
+            <li>LLMs</li>
+            <li>RAG</li>
+            <li>SQL</li>
+            <li>Git/GitHub</li>
+        </ul>
     </div>
 </section>
 
 <section id="certificates" class="section">
     <div class="container">
         <h2>Certificates</h2>
-        <p>Your certificates content goes here...</p>
+        <ul class="list-block">
+            <li>Machine Learning Specialization</li>
+            <li>Deep Learning Fundamentals</li>
+            <li>Computer Vision Applications</li>
+        </ul>
     </div>
 </section>
 
 <section id="experience" class="section">
     <div class="container">
         <h2>Experience</h2>
-        <p>Your experience content goes here...</p>
+        <ul class="list-block">
+            <li><b>AI Engineer Trainee</b> — Built and deployed AI prototypes with focus on NLP and computer vision workflows.</li>
+            <li><b>Freelance AI Developer</b> — Delivered small-scale ML automation and model integration projects.</li>
+        </ul>
     </div>
 </section>
 
 <section id="activities" class="section">
     <div class="container">
         <h2>Activities</h2>
-        <p>Your activities content goes here...</p>
+        <ul class="list-block">
+            <li>Participated in AI hackathons and student technical events.</li>
+            <li>Contributed to open-source repositories on GitHub.</li>
+            <li>Mentored peers in machine learning project development.</li>
+        </ul>
     </div>
 </section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Moemn Adel — All rights reserved.</p>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>

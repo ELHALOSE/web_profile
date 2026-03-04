@@ -1,16 +1,30 @@
-// Offset fix for fixed navbar
-const navHeight = document.querySelector("header").offsetHeight;
+const header = document.querySelector("header");
+const nav = document.querySelector("nav");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelectorAll("nav a");
 
-document.querySelectorAll("nav a").forEach(anchor => {
+const getNavHeight = () => header.offsetHeight;
+
+menuToggle?.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+navLinks.forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
         const targetId = this.getAttribute("href");
         const targetSection = document.querySelector(targetId);
 
+        if (!targetSection) return;
+
+        e.preventDefault();
+
         window.scrollTo({
-            top: targetSection.offsetTop - navHeight,
-            behavior: "smooth"
+            top: targetSection.offsetTop - getNavHeight() + 1,
+            behavior: "smooth",
         });
+
+        nav.classList.remove("open");
+        menuToggle?.setAttribute("aria-expanded", "false");
     });
 });
